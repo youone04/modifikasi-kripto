@@ -31,13 +31,15 @@ function App() {
       }
     }
 
+
     // console.log('plaintext : ', text);
     // console.log('kunci :', data);
 
     // proses enkripsi
-    for(let i=0; i< text.length; i++){
+    let j = text.length-1;
+    for(let i=0; i<text.length; i++){
       if(alphanumeric(text[i])){
-        var karakter =  (((text[i].toLocaleUpperCase().charCodeAt(0)-65)+(data[i].charCodeAt(0)-65))%26)+65;
+        var karakter =  (((text[i].toLocaleUpperCase().charCodeAt(0)-65)+(data[j].charCodeAt(0)-65))%26)+65;
         var hasil = String.fromCharCode(karakter);
         if(text[i] === '' || !alphanumeric(text[i])){
           chiper += text[i] 
@@ -47,6 +49,7 @@ function App() {
       }else{
         chiper += text[i] 
       }
+      j--;
     }
 
     alert(chiper)
@@ -88,17 +91,17 @@ function App() {
         n=0;
       }
     }
-
-    for(let i=0; i< chiper.length; i++){
+    let j = chiper.length-1;
+    for(let i=0 ;i<chiper.length; i++){
       var hasil;
+      console.log(data[i])
       if(alphanumeric(chiper[i])){
-       if((chiper[i].toLocaleUpperCase().charCodeAt(0)-65) - (data[i].charCodeAt(0)-65) < 0){
-          hasil = ((chiper[i].toLocaleUpperCase().charCodeAt(0)-65)-(data[i].charCodeAt(0)-65))+26;
+       if((chiper[i].toLocaleUpperCase().charCodeAt(0)-65) - (data[j].charCodeAt(0)-65)< 0){
+          hasil = ((chiper[i].toLocaleUpperCase().charCodeAt(0)-65)-(data[j].charCodeAt(0)-65))+26;
           // console.log(hasil)
-          console.log(hasil)
        }else{
         // console.log(data[i].charCodeAt(0))
-         hasil = ((chiper[i].toLocaleUpperCase().charCodeAt(0)-65)-(data[i].charCodeAt(0)-65))%26;
+         hasil = ((chiper[i].toLocaleUpperCase().charCodeAt(0)-65)-(data[j].charCodeAt(0)-65))%26;
          
        }
 
@@ -113,6 +116,7 @@ function App() {
       }else{
         plaintext += chiper[i] 
       }
+      j--;
     }
 
     alert(plaintext);
