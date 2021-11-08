@@ -137,7 +137,7 @@ function App() {
       <div data-overlay class="o-hidden">
         <section class="pb-0">
           <div class="container">
-            <div class="row justify-content-center text-center min-vh-40 d-flex flex-column align-items-center">
+            <div class="row justify-content-center text-center min-vh-38 d-flex flex-column align-items-center">
               <div class="col-md-10 col-lg-9 col-xl-8" data-aos="fade-up">
                 <h4 class="display-3">
                 Enkripsi dan Dekripsi Modifikasi Vigenere Chiper
@@ -212,12 +212,12 @@ function App() {
                   <textarea
                    placeholder="Masukan Text..."
                   className="panjang-cols"
-                  cols="43"
+                  cols="38"
                     onChange={(e) => setTeks(e.target.value)}
                   ></textarea>
                   <br />
                   <textarea placeholder="Masukan Kunci" 
-                 cols="43"
+                 cols="38"
                   onChange={(e) => setKey(e.target.value)} />
                   <br />
                   <button  class="mt-3 btn btn-sm btn-primary fade-page" onClick={() => enkripsi()}>enkripsi</button>
@@ -258,11 +258,11 @@ function App() {
                   <textarea
                    placeholder="Masukan Chiper..."
                   // className="col-12"
-                  cols="43"
+                  cols="38"
                     onChange={(e) => setChiper(e.target.value)}
                   ></textarea>
                   <br />
-                  <textarea placeholder="Masukan Kunci" cols="43" onChange={(e) => setKey(e.target.value)} />
+                  <textarea placeholder="Masukan Kunci" cols="38" onChange={(e) => setKey(e.target.value)} />
                   <br />
                   <button  class="mt-3 btn btn-sm btn-primary fade-page" onClick={() => dekripsi()}>Deksripsi</button>
                 </div>
