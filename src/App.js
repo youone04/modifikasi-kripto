@@ -68,8 +68,8 @@ function App() {
   };
 
   const dekripsi = () => {
-    console.log(chiper)
-    console.log(key)
+    // console.log(chiper)
+    // console.log(key)
     const data = [];
     let n = 0;
     let plaintext = "";
@@ -134,12 +134,12 @@ function App() {
 
   return (
     <>
-      <div data-overlay class="o-hidden">
-        <section class="pb-0">
-          <div class="container">
-            <div class="row justify-content-center text-center min-vh-38 d-flex flex-column align-items-center">
-              <div class="col-md-10 col-lg-9 col-xl-8" data-aos="fade-up">
-                <h4 class="display-3">
+      <div data-overlay className="o-hidden">
+        <section className="pb-0">
+          <div className="container">
+            <div className="row justify-content-center text-center min-vh-38 d-flex flex-column align-items-center">
+              <div className="col-md-10 col-lg-9 col-xl-8" data-aos="fade-up">
+                <h4 className="display-3">
                 Enkripsi dan Dekripsi Modifikasi Vigenere Chiper
                   <br />{" "}
                   <mark>
@@ -151,24 +151,24 @@ function App() {
                     ></span>
                   </mark>
                 </h4>
-                <p class="lead px-xl-5">
+                <p className="lead px-xl-5">
                 Kriptografi adalah teknik menyampaikan pesan secara tersembunyi dengan memanfaatkan fitur enkripsi data
                 </p>
                 <div
-                  class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center"
+                  className="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center"
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >
                   <button
                   onClick={() => setPilihAksi(true)}
-                    class={aksi?"btn btn-primary btn-lg mx-sm-2 my-1 my-sm-0":"btn btn-lg mx-sm-2 my-1 my-sm-0"}
+                    className={aksi?"btn btn-primary btn-lg mx-sm-2 my-1 my-sm-0":"btn btn-lg mx-sm-2 my-1 my-sm-0"}
                     data-smooth-scroll
                   >
                     ENKRIPSI
                   </button>
                   <button
                     onClick={() => setPilihAksi(false)}
-                    class="btn btn-outline-primary btn-lg mx-sm-2 my-1 my-sm-0"
+                    className="btn btn-outline-primary btn-lg mx-sm-2 my-1 my-sm-0"
                   >
                     DEKRIPSI
                   </button>
@@ -180,32 +180,32 @@ function App() {
             </div>
           </div>
           <div
-            class="position-absolute bottom left w-50 h-50 d-none d-md-block"
+            className="position-absolute bottom left w-50 h-50 d-none d-md-block"
             data-jarallax-element="-24 48"
           >
-            <div class="blob bg-gradient w-50 h-100 bottom left"></div>
+            <div className="blob bg-gradient w-50 h-100 bottom left"></div>
           </div>
           <div
-            class="position-absolute top right w-50 h-50 d-none d-md-block"
+            className="position-absolute top right w-50 h-50 d-none d-md-block"
             data-jarallax-element="48"
           >
-            <div class="blob blob-2 bg-gradient w-50 h-50 top right"></div>
+            <div className="blob blob-2 bg-gradient w-50 h-50 top right"></div>
           </div>
-          <div class="divider divider-bottom bg-primary-3"></div>
+          <div className="divider divider-bottom bg-primary-3"></div>
         </section>
       </div>
 
-      <section class="bg-primary-3 text-white">
-        <div class="container">
+      <section className="bg-primary-3 text-white">
+        <div className="container">
           {
-            aksi && <div class="row justify-content-center">
+            aksi && <div className="row justify-content-center">
             <div
-              class="col-lg-6 mb-3 mb-md-4"
+              className="col-lg-6 mb-3 mb-md-4"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="card card-body bg-white align-items-start flex-sm-row h-100">
-                <div class="ml-sm-3 ml-md-4">
+              <div className="card card-body bg-white align-items-start flex-sm-row h-100">
+                <div className="ml-sm-3 ml-md-4">
                   <h5>Enkripsi Text</h5>
                   {/* enkripsi */}
 
@@ -220,17 +220,17 @@ function App() {
                  cols="38"
                   onChange={(e) => setKey(e.target.value)} />
                   <br />
-                  <button  class="mt-3 btn btn-sm btn-primary fade-page" onClick={() => enkripsi()}>enkripsi</button>
+                  <button  className="mt-3 btn btn-sm btn-primary fade-page" onClick={() => enkripsi()}>enkripsi</button>
                 </div>
               </div>
             </div>
             <div
-              class="col-lg-6 mb-3 mb-md-4"
+              className="col-lg-6 mb-3 mb-md-4"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="card card-body bg-white align-items-start flex-sm-row h-100">
-                <div class="ml-sm-3 ml-md-4">
+              <div className="card card-body bg-white align-items-start flex-sm-row h-100">
+                <div className="ml-sm-3 ml-md-4">
                   <h5>Hasil Enkripsi</h5>
                   <p>
                   <mark>
@@ -244,14 +244,14 @@ function App() {
           }
 
 {
-            !aksi && <div class="row justify-content-center">
+            !aksi && <div className="row justify-content-center">
             <div
-              class="col-lg-6 mb-3 mb-md-4"
+              className="col-lg-6 mb-3 mb-md-4"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div class="card card-body bg-white align-items-start flex-sm-row h-100">
-                <div class="ml-sm-3 ml-md-4">
+              <div className="card card-body bg-white align-items-start flex-sm-row h-100">
+                <div className="ml-sm-3 ml-md-4">
                   <h5>Dekripsi Chiper</h5>
                   {/* enkripsi */}
 
@@ -264,17 +264,17 @@ function App() {
                   <br />
                   <textarea placeholder="Masukan Kunci" cols="38" onChange={(e) => setKey(e.target.value)} />
                   <br />
-                  <button  class="mt-3 btn btn-sm btn-primary fade-page" onClick={() => dekripsi()}>Deksripsi</button>
+                  <button  className="mt-3 btn btn-sm btn-primary fade-page" onClick={() => dekripsi()}>Deksripsi</button>
                 </div>
               </div>
             </div>
             <div
-              class="col-lg-6 mb-3 mb-md-4"
+              className="col-lg-6 mb-3 mb-md-4"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div class="card card-body bg-white align-items-start flex-sm-row h-100">
-                <div class="ml-sm-3 ml-md-4">
+              <div className="card card-body bg-white align-items-start flex-sm-row h-100">
+                <div className="ml-sm-3 ml-md-4">
                   <h5>Hasil Dekripsi</h5>
                   <p>
                   <mark>
