@@ -139,7 +139,7 @@ function App() {
           <div class="container">
             <div class="row justify-content-center text-center min-vh-40 d-flex flex-column align-items-center">
               <div class="col-md-10 col-lg-9 col-xl-8" data-aos="fade-up">
-                <h1 class="display-3">
+                <h4 class="display-3">
                 Enkripsi dan Dekripsi Modifikasi Vigenere Chiper
                   <br />{" "}
                   <mark>
@@ -147,13 +147,12 @@ function App() {
                       data-typed-text
                       data-loop="true"
                       data-type-speed="90"
-                      data-strings='["Bootstrap","quick deployment","static sites","rapid development","clever startups"]'
+                      data-strings='["Kripto","Vigenere Chiper","Modifikasi Chiper"]'
                     ></span>
                   </mark>
-                </h1>
+                </h4>
                 <p class="lead px-xl-5">
-                  Launch your site in style with Jumpstart, a tidy collection of
-                  crafted pages and modular components.
+                Kriptografi adalah teknik menyampaikan pesan secara tersembunyi dengan memanfaatkan fitur enkripsi data
                 </p>
                 <div
                   class="d-flex flex-column flex-sm-row mt-4 mt-md-5 justify-content-center"
@@ -212,12 +211,14 @@ function App() {
 
                   <textarea
                    placeholder="Masukan Text..."
-                  className="col-12"
-                  cols="50"
+                  className="panjang-cols"
+                  cols="43"
                     onChange={(e) => setTeks(e.target.value)}
                   ></textarea>
                   <br />
-                  <input placeholder="Masukan Kunci" size="50" onChange={(e) => setKey(e.target.value)} />
+                  <textarea placeholder="Masukan Kunci" 
+                 cols="43"
+                  onChange={(e) => setKey(e.target.value)} />
                   <br />
                   <button  class="mt-3 btn btn-sm btn-primary fade-page" onClick={() => enkripsi()}>enkripsi</button>
                 </div>
@@ -256,12 +257,12 @@ function App() {
 
                   <textarea
                    placeholder="Masukan Chiper..."
-                  className="col-12"
-                  cols="50"
+                  // className="col-12"
+                  cols="43"
                     onChange={(e) => setChiper(e.target.value)}
                   ></textarea>
                   <br />
-                  <input placeholder="Masukan Kunci" size="50" onChange={(e) => setKey(e.target.value)} />
+                  <textarea placeholder="Masukan Kunci" cols="43" onChange={(e) => setKey(e.target.value)} />
                   <br />
                   <button  class="mt-3 btn btn-sm btn-primary fade-page" onClick={() => dekripsi()}>Deksripsi</button>
                 </div>
